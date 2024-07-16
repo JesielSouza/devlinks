@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+body{
+    background-image: url("../imagens/bg-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.container-perfil{
+    padding: 24px;
+}
+.foto-perfil{
+    margin-bottom: 8px;
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    display: block;
+    margin: 10% auto 20px;
+    border: 2px solid #fff;
+}
+.arroba{
+    line-height: 24px;
+    font-size: 16px;
+    text-align: center;
+}
+/*Switch Toggle*/
+.container-toggle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 40px;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider-round{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc52;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider-round:before{
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    background-image: url("../imagens/moon-stars.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider-round {
+    background-color: #cccccc52;
+}
+
+input:focus + .slider-round {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider-round:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-image: url(../imagens/sun.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.slider-round {
+    border-radius: 34px;
+}
+
+.slider-round:before {
+    border-radius: 50%;
+}
+
+/*Links Buttons*/
+.container-buttons{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub, .ebook,
+.portfolio, .explorer{
+    height: 56px;
+    width: 540px;
+    margin: 16px;
+    border-radius: 5px;
+}
+input.sub, input.ebook,
+input.portfolio, input.explorer{
+    font-size: 16px;
+    background-color: #ffffff37;
+    color: #fff;
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+/*Social media buttons*/
+footer.container-redes{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.github, .instagram,
+.youtube, .linkedin{
+    width: 40px;
+    height: 40px;
+    margin: 16;
+    cursor: pointer;
+}
+/*sobre*/
+.container-thx{
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+/*Media query para responsividade em mobile*/
+@media screen and (max-width: 800px){
+    body{
+        background-image: url("../imagens/bg-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+    }
+    .foto-perfil{
+        max-width: 150px;
+        border-radius: 50%;
+        display: block;
+        margin: 10% auto 20px;
+        border: 2px solid #fff;
+    }
+    .arroba{
+        text-align: center;
+    }
+    /*Switch Toggle*/
+    .container-toggle{
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .switch{
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    .switch input{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider-round{
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff3b;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .slider-round:before{
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    input:checked + .slider-round {
+        background-color: #ffffff3b;
+    }
+    
+    input:focus + .slider-round {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked + .slider-round:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    .slider-round {
+        border-radius: 34px;
+    }
+    
+    .slider-round:before {
+        border-radius: 50%;
+    }
+    
+    .container-buttons{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sub, .ebook,
+    .portfolio, .explorer{
+        height: 56px;
+        width: 312px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: #ffffff37;
+        color: #fff;
+        border: 3px solid #fff;
+    }
+    .github, .instagram,
+    .youtube, .linkedin{
+        width: 40px;
+        height: 40px;
+        margin: 10;
+    }
+    .container-thx{
+        font-size: 24px;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+}
